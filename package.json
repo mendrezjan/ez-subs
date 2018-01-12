@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async-chainable": "^2.2.2",
@@ -15,10 +17,12 @@
     "morgan": "~1.7.0",
     "q": "^1.4.1",
     "serve-favicon": "~2.3.0",
-    "subtitler": "^2.6.0"
+    "subtitler": "^2.6.0",
+    "snyk": "^1.68.0"
   },
   "description": "download subtitles",
   "main": "server.js",
   "author": "jjan",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "snyk": true
 }
